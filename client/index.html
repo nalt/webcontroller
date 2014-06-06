@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>ROS WebController</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <!-- link rel="stylesheet" href="./style2.css" -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+    <script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="./lib/colResizable-master/colResizable-1.3.min.js"></script>
+    <script src="./lib/jquery.ui.touch-punch.min.js"></script>
+    <!--script src="http://192.168.11.47:8080/target/target-script-min.js#anonymous"></script-->
+    <script type="text/javascript" src="./sharedMethods.js"></script>
+    <script type="text/javascript" src="./Widgets/widgetBase.js"></script>
+    <script type="text/javascript" src="./Widgets/paramWidget.js"></script>
+    <script type="text/javascript" src="./Widgets/messageWidget.js"></script>
+    <script type="text/javascript" src="./Widgets/serviceWidget.js"></script>
+    <script type="text/javascript" src="./Widgets/plotWidget.js"></script>
+    <script type="text/javascript" src="./Widgets/publisherWidget.js"></script>
+    <script type="text/javascript" src="./Widgets/imageWidget.js"></script>
+    <script type="text/javascript" src="./Widgets/dummyWidget.js"></script>
+    <script type="text/javascript" src="./lib/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="./lib/flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="./lib/sprintf.js-master/src/sprintf.min.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    
+    <script type="text/javascript">
+    
+    $(function(){
+      mainApplication = new main();
+      mainApplication.initialize();
+    });
+    
+    </script>
+  </head>
+  <body style="font-size:10px;">
+    <div id="siteContent">
+    <nav>
+        <div id="nodeContainer_" class="menuContainer"><h1>Nodes</h1><div id="nodeContainer"></div></div>
+        <div id="topicContainer_" class="menuContainer"><h1>Topics</h1><div id="topicContainer"></div></div>
+        <div id="serviceContainer_" class="menuContainer"><h1>Services</h1><div id="serviceContainer"></div></div>
+        <div id="paramContainer_" class="menuContainer"><h1>Parameter</h1><div id="paramContainer"></div></div>
+        <div id="widgetContainer_" class="menuContainer"><h1>Widgets</h1><div id="widgetContainer"></div></div>
+        <div id="controlBox"></div>
+    </nav>
+    </div>
+    <!-- <div id="deleter" class="menuContainer" style="float:right;background:gray;width:1px;height:100%;"></div> -->
+    <!--div id="refBtn" class="menuContainer" style="float:right"><input type="button" value="Refresh" onclick="mainApplication.refreshMenu()"></input></div-->
+    <!--div id="loadBtn" class="menuContainer" style="float:right;"><input type="button" value="Load" onclick="mainApplication.loadFromStorage()"></input></div-->
+    <!--div id="saveBtn" class="menuContainer" style="float:right;"><input type="button" value="Save" onclick="mainApplication.saveToStorage()"></input></div-->
+    <!--div id="drop" style="position:absolute;width:100px;height:100px;border:3px solid black;"></div-->
+    <!--div id="mainContainer" style="background:#fff; width:100%; height:100%;"></div-->
+  </body>
+</html>

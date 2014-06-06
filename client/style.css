@@ -1,0 +1,159 @@
+@charset "ISO-8859-1";
+
+/*** Unsorted CSS definitions ***/
+/*.menuContainer {width: 140px; float:left; background:#eeeeee;}*/
+.menuContainer h1 {font-family:arial;margin:0px;}
+.ui-menu a {white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.ui-draggable-dragging {border:3px solid black;}
+#drop.hovered {background:blue;}
+#paramWidget.hovered {background:blue;}
+#topicWidget.hovered {background:blue;}
+#serviceWidget.hovered {background:blue;}
+/*#nodeContainer, #topicContainer, #serviceContainer, #paramContainer, #widgetContainer {display:none;}*/
+
+/*** Styles for general use ***/
+	body {margin: 0; font-family: sans-serif; min-height:100%;}
+	ul { padding-left:15px;}
+	td { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:10px;}
+	.active { background: red; }
+
+/*** SiteContent - root div within body ***/
+#siteContent {max-height:100%;}
+
+/*** DesktopContainer ***/
+.desktopContainer { background:fff;
+                    width:100%;
+                    position:absolute;
+                    top:67px;
+                    left:0px;
+                    bottom:0px;
+                  }
+
+
+/*** Navigation ***/
+	h1 { margin-top:5px; }
+
+	nav {
+		border-bottom: 1px solid #999;
+		line-height: 44px;
+		padding: 10px 20px;
+	}
+
+	nav>div {
+		display: inline-block;
+		margin-right: 15px;
+		position: relative;
+		z-index: 999;
+	}
+
+	nav .ui-menu .ui-menu-item a {
+		line-height: 2em;
+	}
+
+	/* Dropdown Menus */
+	.menuContainer:hover div {display:block; position: absolute;}
+	.menuContainer div {display:none; position: absolute;}
+	/*#nodeContainer_:hover #nodeContainer {display:block; position: absolute;}
+	#topicContainer_:hover #topicContainer {display:block; position: absolute;}
+	#serviceContainer_:hover #serviceContainer {display:block; position: absolute;}
+	#paramContainer_:hover #paramContainer {display:block; position: absolute;}
+	#widgetContainer_:hover #widgetContainer {display:block; position: absolute;}*/
+
+	/*Control Box*/
+	#controlBox {float:	right;}
+	#controlBox button {height: 40px; width: 40px; margin-right: 5px; font-size: 14px;}
+	#controlBox input {
+		margin-right: 5px;
+		border: 1px solid #ccc;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		font-size: 12px;
+		padding: 10px 7px;
+		outline: 0;
+		-webkit-appearance: none;
+	}
+	#controlBox input:focus {
+		border-color: #f80;
+	}
+
+	#connMen { position: relative;}
+	
+	#connMenContent {
+		display:none;
+		position: absolute;
+		width: 250px;
+		float: right;
+		top: 40px;
+		right: 0px;
+		padding: 5px;
+		text-align: right;
+	}
+
+	#connMen:hover #connMenContent {display:block;}
+
+
+/*** Widget window ***/
+	.widget { position:absolute; border:0 solid black; width:300px; height:300px;
+		min-width: 100px; min-height: 100px;
+		z-index: 100; }
+
+	.widget #title { position: absolute; left:0; top: 0; width:100%; height:29px;
+		background: #dde;
+		border-radius: 10px 10px 0 0;
+		border-bottom: 1px solid white;
+		box-shadow: 3px 3px 3px 0 #ccc;
+	}
+
+	.widget #title h2 {
+		position: absolute; left:0; top: 0;
+		margin-left: 10px; margin-top: 0; margin-bottom: 0;
+		line-height: 29px;
+	}
+
+	.widget #title #buttons { position: absolute; right: 0; top: 0; margin-right: 10px; z-index: 1;}
+	.widget #title button { height: 29px; width: 29px; margin-left: 5px;
+		border-width: 0; background-color: #ccd;
+		/*border-left: 1px solid gray; border-right: 1px solid gray; border-top: none; border-bottom: none;*/
+		}
+
+	.widget #content { position: absolute; left:0; top: 30px; bottom: 0; width:100%;
+		background: #eee; box-shadow: 3px 3px 3px 0 #ccc; overflow: auto; }
+
+/*** View mode definitions; elements with viewN are only shown in view mode N ***/
+	.view_top0 .view1, .view_top0 .view2 { display: none; }
+	.view_top1 .view0, .view_top1 .view2 { display: none; }
+	.view_top2 .view0, .view_top2 .view1 { display: none; }
+
+/*** Specific Widgets ***/
+	.paramWidget .pTable { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; }
+	#.paramWidget .pTable tr td:first-child { max-width: 90px; }
+	#.paramWidget .pTable tr td:last-child { width: 90px; }
+
+  .serviceWidget .sTable {white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; }
+  .serviceWidget .sTable .headRow td {max-width: 90px;}
+
+
+/*** Property Window Styling ***/
+	ul.properties {
+		clear: both;
+	}
+
+	ul.properties li {
+		clear: both;
+		line-height: 2em;
+		list-style-type: none;
+	}
+	
+	ul.properties li .field {
+		float: left;
+	}
+
+	ul.properties li .val {
+		overflow: hidden;
+		padding-left: 10px;
+	}
+
+	ul.properties li .val input {
+		width: 100%;
+	}

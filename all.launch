@@ -1,0 +1,12 @@
+ <launch>
+    <arg name="http_port" default="8888" />
+    <arg name="http_port_mjpeg" default="8889" />
+
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+    <node pkg="mjpeg_server" name="mjpeg_server" type="mjpeg_server">
+        <param name="port" value="$(arg http_port_mjpeg)" />
+    </node>
+
+    <node pkg="webcontroller" type="open-browser.sh" name="$(anon browser)" args="$(arg http_port)" respawn="false" />
+    <node pkg="webcontroller" type="webserver.sh" name="$(anon webserver)" args="$(arg http_port)" respawn="false" />
+</launch>
